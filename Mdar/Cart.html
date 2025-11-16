@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="topbar ">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between py-2">
+
+
+                <div class="d-flex align-items-center gap-3">
+
+
+                    <div class="logo d-flex align-items-center gap-2">
+                        <img src="imge/product/MR 1.png" alt="logo" class="rounded" style="height:45px;" />
+                    </div>
+
+
+                    <form class="d-none d-md-flex align-items-center">
+                        <div class="input-group search-input">
+                            <select class="form-select" style="max-width: 150px;">
+                                <option selected>All Categories</option>
+                                <option>Shoes</option>
+                                <option>Clothes</option>
+                                <option>Accessories</option>
+                                <option>Perfumes</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Search for products, e.g. sneakers">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1 dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-globe"></i>
+                        <span>English</span>
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">العربية</a></li>
+                        <li><a class="dropdown-item" href="#">Français</a></li>
+                        <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                    </ul>
+                </div>
+
+
+
+                <button onclick="window.location.href='AccUser.html'"
+                        class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1">
+                    <i class="fa fa-user"></i>
+                    <span>Account</span>
+                </button>
+
+
+
+                <button id="openWishlist" class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1">
+                    <i class="fa fa-bookmark"></i>
+                    <span>Wishlist</span>
+                </button>
+
+
+                <button id="openWishlist1" class="btn btn-outline-primary d-flex align-items-center gap-1">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="badge bg-white text-dark ms-1">3</span>
+                </button>
+
+            </div>
+        </div>
+        <a href="index.html" class="btn btn-light px-4 py-2 rounded-pill custom-btn mb-3">⬅ Back</a>
+    </header>
+
+    <section class="container">
+
+        <div class="row 6 mt-2">
+
+            <div class="col-md-2">
+
+                <div class="product-card text-center mb-5">
+                    <img src="imge\product\ac8c77c543f38368cb9b512e83f5cca9215559eb.jpg" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-2">Samsung TV 40N5300</h6>
+                    <div class="c-price mb-3">
+                        <span class="text-decoration-line-through text-muted small">$49.99</span>
+                        <span class="text-orange fw-bold ">$730.00</span>
+                    </div>
+                    <div class="c-qty d-flex justify-content-center align-items-center gap-3">
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle btn-minus" id="btn-minus">−</button>
+                        <span class="fw-semibold qty-value">1</span>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle btn-plus" id="btn-plus">+</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center mb-5">
+                    <img src="imge\product\5e3df45d5360d31b71eeed225d303cba891cfc29.jpg" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-2">NINIVISION IP Camera</h6>
+                    <div class="c-price mb-3">
+                        <span class="text-decoration-line-through text-muted small">$49.99</span>
+                        <span class="text-orange fw-bold ">$38.98</span>
+                    </div>
+                    <div class="c-qty d-flex justify-content-center align-items-center gap-3">
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle btn-minus">−</button>
+                        <span class="fw-semibold qty-value" id="qty-value">1</span>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle btn-plus" id="btn-plus">+</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center mb-5">
+                    <img src="imge\product\CUOnJSc6xg_2048x2048 1 (4).png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-2">Nintendo Switch Consol</h6>
+                    <div class="c-price mb-3">
+                        <span class="text-decoration-line-through text-muted small">$49.99</span>
+                        <span class="text-orange fw-bold ">$299.00</span>
+                    </div>
+                    <div class="c-qty d-flex justify-content-center align-items-center gap-3">
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle btn-minus" id="btn-minus">−</button>
+                        <span class="fw-semibold qty-value" id="qty-value">1</span>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle btn-plus" id="btn-plus">+</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <div>
+                    <div class="text-muted small">TOTAL</div>
+                    <div class="text-orange fw-bold fs-4">$1067.98</div>
+                    <div class="text-muted small">Free Domestic Shipping</div>
+                </div>
+                <button class="btn btn-orange px-4 py-2 rounded-pill custom-btn" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+                    CHECKOUT →
+                </button>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.product-card').forEach(card => {
+                const qtyValue = card.querySelector('.qty-value');
+                const btnPlus = card.querySelector('.btn-plus');
+                const btnMinus = card.querySelector('.btn-minus');
+
+                btnPlus.addEventListener('click', () => {
+                    qtyValue.textContent = parseInt(qtyValue.textContent) + 1;
+                });
+
+                btnMinus.addEventListener('click', () => {
+                    let current = parseInt(qtyValue.textContent);
+                    if (current > 1) qtyValue.textContent = current - 1;
+                });
+            });
+        </script>
+
+        <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-body">
+
+                        <!-- ✅ القالب الداخلي -->
+                        <div class="payment-card-container">
+                            <div class="payment-card-box position-relative">
+                                <button class="close-btn" type="button" data-bs-dismiss="modal">&times;</button>
+
+                                <div class="section-title">SHIPPING ADDRESS</div>
+                                <div class="address-info mb-2">
+                                    <strong>Dawood Ahmed</strong><br>
+                                    No 857292, Alhob Street, Al-mussaken, AL-Mukalla,<br>
+                                    Hadhramaut ,Yemen
+                                </div>
+
+                                <button class="btn-change mb-3">Change</button>
+
+                                <div class="section-title">Payment Method</div>
+
+                                <div class="payment-method">
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" width="30"> Master Card</span>
+                                                    <input class="form-check-input" type="radio" name="payment" checked>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" width="40"> Google Pay</span>
+                                                    <input class="form-check-input" type="radio" name="payment">
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" width="40"> Visa Card</span>
+                                                    <input class="form-check-input" type="radio" name="payment">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" width="15"> Apple Pay</span>
+                                                    <input class="form-check-input" type="radio" name="payment">
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="40"> Paypal</span>
+                                                    <input class="form-check-input" type="radio" name="payment">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="imge/product/tabby-logo-1.png" width="22"> Tabby</span>
+                                                    <input class="form-check-input" type="radio" name="payment">
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="imge/product/5NSVd6hEkYhZvqdeEv3q5A760qtKEFUh4Na1ezMD.png" width="22"> Tamara</span>
+                                                    <input class="form-check-input" type="radio" name="payment">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-check-label w-100">
+                                                <div class="form-check d-flex align-items-center justify-content-between">
+                                                    <span><img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" width="18"> Add Promo Code</span>
+                                                    <i class="bi bi-chevron-right text-secondary"></i>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ✅ نهاية القالب -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container">
+        <hr>
+        <h4><span class="color_text_titel">recommended</span>  Product</h4>
+        <div class="row 6">
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\CUOnJSc6xg_2048x2048 1 (2).png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Samsung TV 40N5300</h6>
+                    <div class="price">$730.00</div>
+                    <div class="old-price">$855.00</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\5e3df45d5360d31b71eeed225d303cba891cfc29.jpg" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">NINIVISION IP Camera</h6>
+                    <div class="price">$38.98</div>
+                    <div class="old-price">$49.99</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\4c532df5123f8e353c2f101176ae5f8fc112aebb.png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Gree Air Conditioner</h6>
+                    <div class="price">$450.50</div>
+                    <div class="old-price">$599.99</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\2d6a75f36f43a14956c9b9d53764aea87a894015.png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">PEL Glamour Microwave</h6>
+                    <div class="price">$130.99</div>
+                    <div class="old-price">$200.00</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\b12e5a13ac102fedcfca6c66e467f55e45798a9d.jpg" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Girstunm Tea Dress </h6>
+                    <div class="price">$10.15</div>
+                    <div class="old-price">$15.20</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\81dlkEHdxNL.png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Jaguar Dining wooding Chair</h6>
+                    <div class="price">$14.22</div>
+                    <div class="old-price">$16.41</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div>
+            <!--scound Row -->
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\61tXy3qj2oL._SX679_.jpg" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">COVERGIRL Clean Foundation</h6>
+                    <div class="price">$13.55</div>
+                    <div class="old-price">$15.73</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\b286ce0f90a987630f53cf49962424e09cf35b99.png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Haier 1.5 Ton 3 Star Split Inverter AC</h6>
+                    <div class="price">$357.77</div>
+                    <div class="old-price">$489.99</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div> <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\f534eb946eb1e758678a098151394c8387c008cc.png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Anex DELUXE ROTI MAKER AG-2029</h6>
+                    <div class="price">$199.25</div>
+                    <div class="old-price">$299.66</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+
+            </div> <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\CUOnJSc6xg_2048x2048 1 (4).png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Nintendo Switch Console 64GB storage</h6>
+                    <div class="price">$299.00</div>
+                    <div class="old-price">$399.00</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+            </div> <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\CUOnJSc6xg_2048x2048 1.png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Skechers Hotshot Casual Walking Shoes</h6>
+                    <div class="price">$19.20</div>
+                    <div class="old-price">$26.80</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+            </div> <div class="col-md-2">
+                <div class="product-card text-center">
+                    <img src="imge\product\85db8a84945a78599aefd1b4e7f77b20c03acdb9.png" class="product-img mb-2" alt="prod">
+                    <h6 class="mb-1">Dawlance Microwave W-115</h6>
+                    <div class="price">$134.51</div>
+                    <div class="old-price">$273.78</div>
+                    <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer_ba">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="footer-title">MDAR.CO</h5>
+                    <p class="footer-text">
+                        Welcome to Mdar, the premier international marketplace and one-stop web site for finding virtually any product you can imagine. Our platform is designed to connect you directly with a global network of suppliers and manufacturers. For entrepreneurs, we are a leading wholesale.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>HELP</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Delivery Details</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>FAQ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Manage Deliveries</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="payment-icons">
+                <img src="imge\product\Badge.png">
+                <img src="imge\product\Badge (1).png">
+                <img src="imge\product\Badge (4).png">
+                <img src="imge\product\Badge (3).png">
+                <img src="imge\product\Badge (5).png">
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2025 MDAR. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Wishlist Popup -->
+    <div class="wishlist-overlay" id="wishlistOverlay">
+        <div class="wishlist-box">
+
+            <div class="wishlist-header">
+                <span>You have 03 Items in List</span>
+                <h3>Wishlist</h3>
+                <button class="close-btn" id="closeWishlist">✕</button>
+            </div>
+
+            <div class="wishlist-item">
+                <img src="imge/product/ac8c77c543f38368cb9b512e83f5cca9215559eb.jpg" alt="">
+                <div class="item-info">
+                    <h4>Samsung TV 40N5300</h4>
+                    <p>QTY: 1</p>
+                    <p class="price">$730.00</p>
+                </div>
+                <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                <button class="delete-btn"><i class="fa-solid fa-trash fa-xl"></i></button>
+
+            </div>
+
+            <hr>
+
+            <div class="wishlist-item">
+                <img src="imge/product/73176e550390b570e17802a5d36fd419125d39a2.png" alt="">
+                <div class="item-info">
+                    <h4>playstation 4</h4>
+                    <p>QTY: 1</p>
+                    <p class="price">$215.00</p>
+                </div>
+                <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                <button class="delete-btn"><i class="fa-solid fa-trash fa-xl"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <!--Cart popup-->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <span>You have 03 Items in List</span>
+            <h4>Cart List</h4>
+            <button id="closeCart" class="close-btn">&times;</button>
+        </div>
+
+        <div class="cart-body">
+            <div class="cart-item">
+                <img src="imge/product/CUOnJSc6xg_2048x2048 1 (2).png" alt="">
+                <div>
+                    <p>Samsung TV 40N5300</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$730.00</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <hr>
+
+            <div class="cart-item">
+                <img src="imge/product/5e3df45d5360d31b71eeed225d303cba891cfc29.jpg" alt="">
+                <div>
+                    <p>NINIVISION IP Camera</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$38.98</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <hr>
+
+            <div class="cart-item">
+                <img src="imge/product/CUOnJSc6xg_2048x2048 1 (4).png" alt="">
+                <div>
+                    <p>Nintendo Switch Console</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$299.00</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total">
+                <span>Cart Total</span>
+                <strong>$1067.98</strong>
+            </div>
+            <div class="cart-buttons">
+                <button class="btn-go"><a class="text-white" href="Cart.html">Go to Cart </a></button>
+                <button class="btn-checkout">Proceed To Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        (function () {
+            const el = document.getElementById('heroCarousel');
+            if (!el) return;
+            let startX = 0;
+            el.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+            el.addEventListener('touchend', e => {
+                let endX = e.changedTouches[0].clientX;
+                const car = bootstrap.Carousel.getInstance(el);
+                if (!car) return;
+                if (startX - endX > 40) car.next();
+                if (endX - startX > 40) car.prev();
+            });
+        })();
+
+        const openBtn = document.getElementById("openWishlist");
+        const closeBtn = document.getElementById("closeWishlist");
+        const overlay = document.getElementById("wishlistOverlay");
+
+        openBtn.onclick = () => overlay.style.display = "flex";
+        closeBtn.onclick = () => overlay.style.display = "none";
+
+        overlay.onclick = (e) => {
+            if (e.target === overlay) overlay.style.display = "none";
+        };
+
+        document.getElementById("openWishlist1").onclick = () => {
+            document.getElementById("cartSidebar").classList.add("active");
+        };
+        document.getElementById("closeCart").onclick = () => {
+            document.getElementById("cartSidebar").classList.remove("active");
+        };
+
+
+        document.getElementById("openWishlist").onclick = () => {
+            document.getElementById("wishlistOverlay").classList.add("active");
+        };
+
+        document.getElementById("closeWishlist").onclick = () => {
+            document.getElementById("wishlistOverlay").classList.remove("active");
+        };
+
+
+
+    </script>
+</body>
+</html>

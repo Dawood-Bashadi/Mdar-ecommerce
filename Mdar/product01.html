@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="product01.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="topbar ">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between py-2">
+
+
+                <div class="d-flex align-items-center gap-3">
+
+
+                    <div class="logo d-flex align-items-center gap-2">
+                        <img src="imge/product/MR 1.png" alt="logo" class="rounded" style="height:45px;" />
+                    </div>
+
+
+                    <form class="d-none d-md-flex align-items-center">
+                        <div class="input-group search-input">
+                            <select class="form-select" style="max-width: 150px;">
+                                <option selected>All Categories</option>
+                                <option>Shoes</option>
+                                <option>Clothes</option>
+                                <option>Accessories</option>
+                                <option>Perfumes</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Search for products, e.g. sneakers">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1 dropdown-toggle"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-globe"></i>
+                            <span>English</span>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">العربية</a></li>
+                            <li><a class="dropdown-item" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <button onclick="window.location.href='AccUser.html'"
+                            class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1">
+                        <i class="fa fa-user"></i>
+                        <span>Account</span>
+                    </button>
+
+
+
+                    <button id="openWishlist" class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1">
+                        <i class="fa fa-bookmark"></i>
+                        <span>Wishlist</span>
+                    </button>
+
+
+                    <button id="openWishlist1" class="btn btn-outline-primary d-flex align-items-center gap-1">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="badge bg-white text-dark ms-1">3</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="btn btn-light px-4 py-2 rounded-pill custom-btn mb-3">⬅ Back</a>
+    </header>
+
+
+
+    <div class="container py-4">
+
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-6">
+
+
+                <img id="mainImage" src="imge\product\993680a4fb804721053db577fe1e84c4758c415b.png" class="main-img border">
+
+                <div class="position-relative d-flex align-items-center mt-3">
+
+
+                    <button class="btn btn-warning btn-sm position-absolute" style="left:-20px; border-radius:50%;" onclick="slideThumbs('left')">
+                        ←
+                    </button>
+
+
+                    <div id="thumbContainer" class="d-flex gap-2 overflow-hidden" style="width:100%; scroll-behavior:smooth;">
+                        <img onclick="changeImage(this)" src="imge\product\993680a4fb804721053db577fe1e84c4758c415b.png" class="thumb-img active">
+                        <img onclick="changeImage(this)" src="imge\product\71TyobEvVPL._AC_SL1500_.jpg" class="thumb-img">
+                        <img onclick="changeImage(this)" src="imge\product\91tYptwIU2L._AC_SL1500_.jpg" class="thumb-img">
+                        <img onclick="changeImage(this)" src="imge\product\716y20AfiTL._AC_SL1500_.jpg" class="thumb-img">
+                        <img onclick="changeImage(this)" src="imge\product\71YOZat0+TL._AC_SL1500_.jpg" class="thumb-img">
+                    </div>
+
+
+                    <button class="btn btn-warning btn-sm position-absolute" style="right:-20px; border-radius:50%;" onclick="slideThumbs('right')">
+                        →
+                    </button>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="d-flex align-items-center mb-2">
+                    <span class="text-warning fs-5">★ ★ ★ ★ ☆</span>
+                    <span class="ms-2 fw-semibold">4.7 Star Rating</span>
+                    <span class="text-muted ms-1">(21,671 User feedback)</span>
+                </div>
+
+                <h4>2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray</h4>
+
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <p><strong>Sku:</strong> A246471</p>
+                        <p><strong>Brand:</strong> Apple</p>
+                    </div>
+                    <div class="col-6">
+                        <p><strong>Availability:</strong> <span class="text-success">In Stock</span></p>
+                        <p><strong>Category:</strong> Electronics Devices</p>
+                    </div>
+                </div>
+
+                <h3 class="text-danger mt-2">
+                    $655.00
+                    <small class="text-decoration-line-through text-muted fs-5">$799.00</small>
+                    <span class="badge bg-warning text-dark">10% Save</span>
+                </h3>
+
+                <hr>
+
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Color</label><br>
+                    <span class="color-option active" style="background:#eee"
+                          onclick="changeColorImage('imge\\product\\993680a4fb804721053db577fe1e84c4758c415b.png', this)"></span>
+                    <span class="color-option" style="background:#777"
+                          onclick="changeColorImage('imge\\product\\111901_mbp16-gray.png', this)"></span>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Size</label>
+                        <select class="form-select">
+                            <option>13-inch Liquid Retina XDR display</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Storage</label>
+                        <select class="form-select">
+                            <option>256GB SSD Storage</option>
+                            <option>500GB SSD Storage</option>
+                            <option>1TB SSD Storage</option>
+                            <option>5TB SSD Storage</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <label class="form-label fw-bold">Memory</label>
+                    <select class="form-select">
+                        <option>8GB unified memory</option>
+                        <option>16GB unified memory</option>
+                        <option>32GB unified memory</option>
+                        <option>64GB unified memory</option>
+                    </select>
+                </div>
+
+                <div class="mt-4 d-flex align-items-center">
+                    <button class="btn btn-outline-secondary" onclick="updateQty(-1)">-</button>
+                    <input id="qty" value="1" class="form-control text-center mx-2" style="width:70px;">
+                    <button class="btn btn-outline-secondary" onclick="updateQty(1)">+</button>
+                </div>
+
+                <a href="index.html" class="btn btn-light px-4 py-2 rounded-pill custom-btn mb-3">⬅ Back</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(el) {
+            document.getElementById("mainImage").src = el.src;
+            document.querySelectorAll(".thumb-img").forEach(i => i.classList.remove("active"));
+            el.classList.add("active");
+        }
+
+        function changeColorImage(imageSrc, el) {
+
+            document.getElementById("mainImage").src = imageSrc;
+
+
+            document.querySelectorAll(".color-option").forEach(i => i.classList.remove("active"));
+            el.classList.add("active");
+
+
+            document.querySelectorAll(".thumb-img").forEach(i => i.classList.remove("active"));
+
+
+        }
+
+
+        function updateQty(n) {
+            let q = document.getElementById("qty");
+            q.value = Math.max(1, Number(q.value) + n);
+        }
+
+        function slideThumbs(direction) {
+            let container = document.getElementById("thumbContainer");
+            let scrollAmount = 120;
+            if (direction === 'left') {
+                container.scrollLeft -= scrollAmount;
+            } else {
+                container.scrollLeft += scrollAmount;
+            }
+        }
+
+
+        setInterval(function () {
+            slideThumbs('right');
+        }, 3000);
+    </script>
+
+    <section class="py-5">
+        <div class="container bg-white p-4 rounded-3 shadow-sm">
+            <div class="row g-4">
+
+
+                <div class="col-lg-8">
+                    <h5 class="fw-bold mb-3">Description</h5>
+                    <p class="text-muted mb-3">
+                        The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip —
+                        the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life.
+                    </p>
+                    <p class="text-muted">
+                        Even the most ambitious projects are easily handled with up to 10 CPU cores, up to 16 GPU cores,
+                        a 16-core Neural Engine, and dedicated media engines that support H.264, HEVC, and ProRes codecs.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3">Feature</h6>
+                            <ul class="list-unstyled lh-lg">
+                                <li><i class="bi bi-shield-check text-warning me-2"></i> Free 1 Year Warranty</li>
+                                <li><i class="bi bi-truck text-warning me-2"></i> Free Shipping & Fasted Delivery</li>
+                                <li><i class="bi bi-cash-coin text-warning me-2"></i> 100% Money-back guarantee</li>
+                                <li><i class="bi bi-headset text-warning me-2"></i> 24/7 Customer support</li>
+                                <li><i class="bi bi-lock text-warning me-2"></i> Secure payment method</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3">Shipping Information</h6>
+                            <ul class="list-unstyled text-muted lh-lg">
+                                <li><strong>Courier:</strong> 2 - 4 days, free shipping</li>
+                                <li><strong>Local Shipping:</strong> up to one week, $19.00</li>
+                                <li><strong>UPS Ground:</strong> 4 - 6 days, $29.00</li>
+                                <li><strong>Global Export:</strong> 3 - 4 days, $39.00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Review</h5>
+
+
+                    <div class="d-flex mb-4">
+                        <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center me-3" style="width:45px;height:45px;">JB</div>
+                        <div>
+                            <div class="text-warning small mb-1">★★★★☆</div>
+                            <strong>John bayer</strong>
+                            <div class="small text-muted">28 Oct, 2024</div>
+                            <p class="mb-2">It's good laptop for every work 😎</p>
+                            <div class="d-flex gap-2">
+                                <img src="https://via.placeholder.com/60" class="rounded" alt="">
+                                <img src="https://via.placeholder.com/60" class="rounded" alt="">
+                                <img src="https://via.placeholder.com/60" class="rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex mb-4">
+                        <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center me-3" style="width:45px;height:45px;">SS</div>
+                        <div>
+                            <div class="text-warning small mb-1">★★★★☆</div>
+                            <strong>Sam Smith</strong>
+                            <div class="small text-muted">13 Sep, 2024</div>
+                            <p class="mb-0">Perfect packaging and protection.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex">
+                        <div class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center me-3" style="width:45px;height:45px;">DD</div>
+                        <div>
+                            <div class="text-warning small mb-1">★★★★★</div>
+                            <strong>Dick Davidson</strong>
+                            <div class="small text-muted">7 Oct, 2023</div>
+                            <p class="mb-0">I connected it and it boots up quickly 😊👍</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-4">
+        <div class="row">
+
+
+            <div class="col-md-3">
+                <h6>RELATED PRODUCT</h6>
+                <div class="product-card">
+                    <img src="imge\product\ac8c5742540a220f4fa9a652f0e5dbc9673c1e75.jpg" alt="">
+                    <div>
+                        <p class="product-title">HP 17 Business Laptop "17.3"</p>
+                        <p class="price">$655.00</p>
+                        <div class="old-price">$799.00</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\71OEJ+p7hHL._AC_SL1500_.jpg" alt="">
+                    <div>
+                        <p class="product-title">ASUS TUF Gaming A16 Laptop</p>
+                        <p class="price">$794.99</p>
+                        <div class="old-price">$899.99</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\CUOnJSc6xg_2048x2048 1 (4).png" alt="">
+                    <div>
+                        <p class="product-title">Nintendo Switch Console</p>
+                        <p class="price">$299.00</p>
+                        <div class="old-price">$399.00</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <h6>PRODUCT ACCESSORIES</h6>
+                <div class="product-card">
+                    <img src="imge\product\61tXy3qj2oL._SX679_.jpg" alt="">
+                    <div>
+                        <p class="product-title">COVERGIRL Clean Foundation</p>
+                        <p class="price">$13.55</p>
+                        <div class="old-price">$15.73</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\71vBbrfjOmL._AC_SX522_.jpg" alt="">
+                    <div>
+                        <p class="product-title">Anne Klein Women's Bracelet Watch</p>
+                        <p class="price">$32.00</p>
+                        <div class="old-price">$45.00</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\814fhyOzbnL._SX679_.jpg" alt="">
+                    <div>
+                        <p class="product-title">NYX collection professional makeup </p>
+                        <p class="price">$32.40</p>
+                        <div class="old-price">$40.99</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <h6>NEW SHOES</h6>
+                <div class="product-card">
+                    <img src="imge\product\f9287dc7adfe20a0030bce1e3a453145bd43b04a.jpg" alt="">
+                    <div>
+                        <p class="product-title">Lucky Step Casual Walking Shoes</p>
+                        <p class="price">$19.20</p>
+                        <div class="old-price">$26.80</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\71z44N5WkcL._AC_SY695_.jpg" alt="">
+                    <div>
+                        <p class="product-title">New Balance Men's 515 V3 </p>
+                        <p class="price">$17.15</p>
+                        <div class="old-price">$20.99</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\71FYt+9xW-L._AC_SY695_.jpg" alt="">
+                    <div>
+                        <p class="product-title">Brooks Men's Adrenaline GTS 24</p>
+                        <p class="price">$21.00</p>
+                        <div class="old-price">$49.99</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <h6>FEATURED PRODUCTS</h6>
+                <div class="product-card">
+                    <img src="imge\product\51AQA9XqBdL._AC_SX679_.jpg" alt="">
+                    <div>
+                        <p class="product-title">Girstunm Women's Classic Tea Dress</p>
+                        <p class="price">$10.15</p>
+                        <div class="old-price">$15.20</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\71BPCVtchML._AC_SY695_.jpg" alt="">
+                    <div>
+                        <p class="product-title">Shoulder Bags for Women</p>
+                        <p class="price">$16.10</p>
+                        <div class="old-price">$18.99</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="imge\product\716OXQgDrwL._AC_SX569_.jpg" alt="">
+                    <div>
+                        <p class="product-title">Hanes Originals Crew T Pack, Stretch Cotton</p>
+                        <p class="price">$4.15</p>
+                        <div class="old-price">$5.50</div>
+                        <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer_ba">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="footer-title">MDAR.CO</h5>
+                    <p class="footer-text">
+                        Welcome to Mdar, the premier international marketplace and one-stop web site for finding virtually any product you can imagine. Our platform is designed to connect you directly with a global network of suppliers and manufacturers. For entrepreneurs, we are a leading wholesale.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>HELP</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Delivery Details</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>FAQ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Manage Deliveries</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="payment-icons">
+                <img src="imge\product\Badge.png">
+                <img src="imge\product\Badge (1).png">
+                <img src="imge\product\Badge (4).png">
+                <img src="imge\product\Badge (3).png">
+                <img src="imge\product\Badge (5).png">
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2025 MDAR. All Rights Reserved.
+        </div>
+    </footer>
+
+    <div class="wishlist-overlay" id="wishlistOverlay">
+        <div class="wishlist-box">
+
+            <div class="wishlist-header">
+                <span>You have 03 Items in List</span>
+                <h3>Wishlist</h3>
+                <button class="close-btn" id="closeWishlist">✕</button>
+            </div>
+
+            <div class="wishlist-item">
+                <img src="imge/product/ac8c77c543f38368cb9b512e83f5cca9215559eb.jpg" alt="">
+                <div class="item-info">
+                    <h4>Samsung TV 40N5300</h4>
+                    <p>QTY: 1</p>
+                    <p class="price">$730.00</p>
+                </div>
+                <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                <button class="delete-btn"><i class="fa-solid fa-trash fa-xl"></i></button>
+
+            </div>
+
+            <hr>
+
+            <div class="wishlist-item">
+                <img src="imge/product/73176e550390b570e17802a5d36fd419125d39a2.png" alt="">
+                <div class="item-info">
+                    <h4>playstation 4</h4>
+                    <p>QTY: 1</p>
+                    <p class="price">$215.00</p>
+                </div>
+                <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                <button class="delete-btn"><i class="fa-solid fa-trash fa-xl"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <span>You have 03 Items in List</span>
+            <h4>Cart List</h4>
+            <button id="closeCart" class="close-btn">&times;</button>
+        </div>
+
+        <div class="cart-body">
+            <div class="cart-item">
+                <img src="imge/product/CUOnJSc6xg_2048x2048 1 (2).png" alt="">
+                <div>
+                    <p>Samsung TV 40N5300</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$730.00</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <hr>
+
+            <div class="cart-item">
+                <img src="imge/product/5e3df45d5360d31b71eeed225d303cba891cfc29.jpg" alt="">
+                <div>
+                    <p>NINIVISION IP Camera</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$38.98</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <hr>
+
+            <div class="cart-item">
+                <img src="imge/product/CUOnJSc6xg_2048x2048 1 (4).png" alt="">
+                <div>
+                    <p>Nintendo Switch Console</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$299.00</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total">
+                <span>Cart Total</span>
+                <strong>$1067.98</strong>
+            </div>
+            <div class="cart-buttons">
+                <button class="btn-go"><a class="text-white" href="Cart.html">Go to Cart </a></button>
+                <button class="btn-checkout">Proceed To Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        (function () {
+            const el = document.getElementById('heroCarousel');
+            if (!el) return;
+            let startX = 0;
+            el.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+            el.addEventListener('touchend', e => {
+                let endX = e.changedTouches[0].clientX;
+                const car = bootstrap.Carousel.getInstance(el);
+                if (!car) return;
+                if (startX - endX > 40) car.next();
+                if (endX - startX > 40) car.prev();
+            });
+        })();
+
+        const openBtn = document.getElementById("openWishlist");
+        const closeBtn = document.getElementById("closeWishlist");
+        const overlay = document.getElementById("wishlistOverlay");
+
+        openBtn.onclick = () => overlay.style.display = "flex";
+        closeBtn.onclick = () => overlay.style.display = "none";
+
+        overlay.onclick = (e) => {
+            if (e.target === overlay) overlay.style.display = "none";
+        };
+
+        document.getElementById("openWishlist1").onclick = () => {
+            document.getElementById("cartSidebar").classList.add("active");
+        };
+        document.getElementById("closeCart").onclick = () => {
+            document.getElementById("cartSidebar").classList.remove("active");
+        };
+
+
+        document.getElementById("openWishlist").onclick = () => {
+            document.getElementById("wishlistOverlay").classList.add("active");
+        };
+
+        document.getElementById("closeWishlist").onclick = () => {
+            document.getElementById("wishlistOverlay").classList.remove("active");
+        };
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+.profile-card {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border: 1px solid var(--card-border);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .profile-header h3 {
+        font-weight: 600;
+        color: #555;
+    }
+
+.profile-card .upload-btn,
+.profile-card .remove-btn,
+.profile-card .save-btn,
+.profile-card .cancel-btn {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    margin: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.profile-card .upload-btn, .profile-card .save-btn {
+    color: white;
+    background: linear-gradient(90deg, #ff6600, #ff9900);
+}
+
+    .profile-card .upload-btn:hover, .profile-card .save-btn:hover {
+        background: linear-gradient(90deg, #ff9900, #ff6600);
+        transform: translateY(-1px);
+    }
+
+.profile-card .remove-btn, .profile-card .cancel-btn {
+    background-color: #cfcfcf;
+    color: #555;
+}
+
+    .profile-card .remove-btn:hover, .profile-card .cancel-btn:hover {
+        background-color: #e0e0e0;
+        color: #333;
+        transform: translateY(-1px);
+    }
+
+.profile-card .form-control {
+    border-radius: 12px;
+    padding: 12px 15px;
+    border: 1px solid var(--card-border);
+    flex-grow: 0 !important;
+}
+
+.profile-card .form-label {
+    font-weight: 500;
+    color: #666;
+}
+
+.profile-card .icon {
+    margin-right: 8px;
+    color: #777;
+}
+
+.profile-card .save-btn {
+    padding: 10px 30px;
+}
+
+.profile-card .cancel-btn {
+    padding: 10px 30px;
+}
+

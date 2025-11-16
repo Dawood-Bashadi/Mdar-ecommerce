@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="log_in.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="imge/product/f3f2c0a2474fe8c09abb573c1849ae7af856ac64.png" alt="MDAR Logo">
+        </div>
+
+        <div class="tabs" id="tabNav">
+            <button class="tab-btn active" data-target="loginForm">Login</button>
+            <button class="tab-btn" data-target="signupForm">Signup</button>
+        </div>
+
+        <div class="login-form active" id="loginForm">
+            <div class="form-group">
+                <i class="bi bi-person"></i>
+                <input type="text" class="form-control" id="emails" placeholder="USERNAME / EMAIL" value="DawoodAhmed@email.com">
+            </div>
+
+            <div class="form-group">
+                <i class="bi bi-lock"></i>
+                <input type="password" class="form-control" id="password" placeholder="PASSWORD">
+            </div>
+
+            <a href="#" class="forgot-link d-block mb-2" id="forgotPassLink">Forgot Password</a>
+
+            <p class="terms">
+                By logging in, you agree to our <br>
+                <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </p>
+
+            <div class="social-login">
+                <button><img src="imge/product/Group 90.png" width="20"></button>
+                <button><img src="imge/product/icons8-x-50.png" width="20"></button>
+                <button><img src="imge/product/Path 2048.png" width="20"></button>
+            </div>
+
+            <button class="login-submit align-items-center" id="loge_in">→</button>
+        </div>
+
+        <div class="login-form" id="signupForm">
+            <div class="form-group">
+                <i class="bi bi-person"></i>
+                <input type="text" class="form-control" id="signupUsername" placeholder="USERNAME">
+            </div>
+            <div class="form-group">
+                <i class="bi bi-envelope"></i>
+                <input type="email" class="form-control" id="signupEmail" placeholder="EMAIL ADDRESS">
+            </div>
+            <div class="form-group">
+                <i class="bi bi-lock"></i>
+                <input type="password" class="form-control" id="signupPassword" placeholder="PASSWORD">
+            </div>
+            <div class="form-group">
+                <i class="bi bi-lock-fill"></i>
+                <input type="password" class="form-control" id="signupConfirmPassword" placeholder="CONFIRM PASSWORD">
+            </div>
+
+            <p class="terms">
+                By creating an account, you agree to our <br>
+                <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </p>
+
+            <div class="social-login">
+                <button><img src="imge/product/Group 90.png" width="20"></button>
+                <button><img src="imge/product/icons8-x-50.png" width="20"></button>
+                <button><img src="imge/product/Path 2048.png" width="20"></button>
+            </div>
+
+            <button class="login-submit align-items-center" id="signup_btn">✓</button>
+        </div>
+
+
+        <div class="login-form" id="verificationEmail">
+            <h5 class="text-center mb-4">Verification Email</h5>
+            <div class="form-group">
+                <i class="bi bi-patch-check"></i>
+                <input type="text" class="form-control" id="verificationCode" placeholder="VERIFICATION CODE">
+            </div>
+
+            <p class="text-center mt-3">
+                <a href="#" id="resendCodeLink">Resend Code</a>
+            </p>
+
+            <button class="login-submit align-items-center" id="verifyCodeBtn">✓</button>
+
+        </div>
+
+        <div class="login-form" id="forgotPassForm">
+            <h5 class="text-center mb-4">Password Recovery</h5>
+            <div class="form-group">
+                <i class="bi bi-envelope"></i>
+                <input type="email" class="form-control" id="resetEmail" placeholder="ENTER YOUR EMAIL">
+            </div>
+            <div class="text-center mt-3">
+                <p class="text-muted small">We will send a verification code to this email.</p>
+            </div>
+
+            <button class="login-submit align-items-center" id="sendResetCodeBtn">
+                →
+            </button>
+
+            <p class="text-center mt-3">
+                <a href="#" id="backToLoginLink">Back to Login</a>
+            </p>
+        </div>
+
+        <div class="login-form" id="resetPassForm">
+            <h5 class="text-center mb-4">Set New Password</h5>
+            <div class="form-group">
+                <i class="bi bi-patch-check"></i>
+                <input type="text" class="form-control" id="verificationCode" placeholder="VERIFICATION CODE">
+            </div>
+            <div class="form-group">
+                <i class="bi bi-key"></i>
+                <input type="password" class="form-control" id="newPassword" placeholder="NEW PASSWORD">
+            </div>
+            <div class="form-group">
+                <i class="bi bi-key-fill"></i>
+                <input type="password" class="form-control" id="confirmNewPassword" placeholder="CONFIRM NEW PASSWORD">
+            </div>
+
+            <p class="text-center mt-3">
+                <a href="#" id="resendCodeLink">Resend Code</a>
+            </p>
+
+            <button class="login-submit align-items-center" id="resetPasswordBtn">
+                ✓
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailInput = document.getElementById('emails');
+            const loginButton = document.getElementById('loge_in');
+            const passwordInput = document.getElementById('password');
+            const forgotPassLink = document.getElementById('forgotPassLink');
+            const tabNav = document.getElementById('tabNav');
+            const tabButtons = document.querySelectorAll('.tab-btn');
+
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const forgotPassForm = document.getElementById('forgotPassForm');
+            const resetPassForm = document.getElementById('resetPassForm');
+            const verificationEmailForm = document.getElementById('verificationEmail');
+
+
+            const sendResetCodeBtn = document.getElementById('sendResetCodeBtn');
+            const resetPasswordBtn = document.getElementById('resetPasswordBtn');
+            const backToLoginLink = document.getElementById('backToLoginLink');
+            const verifyCodeBtn = document.getElementById('verifyCodeBtn');
+
+
+            const text_email = "DawoodAhmed@email.com";
+            const text_pass = "123456";
+
+            function showForm(formId) {
+                const allForms = [loginForm, signupForm, forgotPassForm, resetPassForm, verificationEmailForm];
+                allForms.forEach(form => form.classList.remove('active'));
+                allForms.forEach(form => form.style.display = 'none');
+
+                document.getElementById(formId).classList.add('active');
+                document.getElementById(formId).style.display = 'block';
+
+
+                if (formId === 'loginForm' || formId === 'signupForm') {
+                    tabNav.classList.remove('hidden');
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    const activeTab = document.querySelector(`[data-target="${formId}"]`);
+                    if (activeTab) {
+                        activeTab.classList.add('active');
+                    }
+                } else {
+                    tabNav.classList.add('hidden');
+                }
+            }
+
+
+            showForm('loginForm');
+
+
+
+            loginButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (loginForm.classList.contains('active')) {
+                    if (emailInput.value === text_email && passwordInput.value === text_pass) {
+                        window.location = 'index.html';
+                    } else {
+                        alert('Invalid username or password!');
+                    }
+                }
+            });
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    showForm(targetId);
+                });
+            });
+
+
+            forgotPassLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                showForm('forgotPassForm');
+            });
+
+
+            backToLoginLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                showForm('loginForm');
+            });
+
+
+
+            sendResetCodeBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const resetEmail = document.getElementById('resetEmail').value;
+                if (resetEmail) {
+                    alert(`Verification code sent to ${resetEmail}.`);
+
+                    showForm('resetPassForm');
+                } else {
+                    alert('Please enter your email address.');
+                }
+            });
+
+
+            resetPasswordBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const code = document.getElementById('verificationCode').value;
+                const newPass = document.getElementById('newPassword').value;
+                const confirmNewPass = document.getElementById('confirmNewPassword').value;
+
+                if (newPass !== confirmNewPass) {
+                    alert('New passwords do not match!');
+                    return;
+                }
+                if (!code || !newPass) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                alert('Password successfully reset! Returning to Login.');
+                showForm('loginForm');
+            });
+
+
+            document.getElementById('signup_btn').addEventListener('click', function (e) {
+
+                const username = document.getElementById('signupUsername').value;
+                const email = document.getElementById('signupEmail').value;
+                const password = document.getElementById('signupPassword').value;
+                const confirmPassword = document.getElementById('signupConfirmPassword').value;
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+                if (username === '' || email === '' || password === '') {
+                    alert('All fields are required!');
+                    return;
+                }
+
+                alert(`Attempting to sign up with: ${username}, ${email}. (Server-side required for completion)`);
+                showForm('verificationEmail');
+
+            });
+
+
+            if (verifyCodeBtn) {
+                verifyCodeBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const code = document.getElementById('verificationCode').value;
+
+                    if (!code) {
+                        alert('Please enter the verification code.');
+                        return;
+                    }
+
+                    alert('Code verified! Redirecting to home page.');
+                    window.location = 'index.html';
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>

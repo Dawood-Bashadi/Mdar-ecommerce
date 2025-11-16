@@ -1,0 +1,86 @@
+.btn-outline-secondary:hover {
+    background-color: #ff7a00;
+    border-color: #ff7a00 ;
+    color: #fff ;
+}
+
+  .text-orange { color: #ff7a00; }
+  .c-qty button {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+  }
+
+
+  .payment-card-container * {
+    box-sizing: border-box;
+  }
+  
+  .payment-card-box {
+    background: #fff;
+   
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .payment-card-box .close-btn {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .payment-card-box .section-title {
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .payment-card-box .address-info {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .payment-card-box .btn-change {
+    background: linear-gradient(to right, #ff7a00, #ffa600);
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 13px;
+  }
+  
+  .payment-card-box .payment-method .form-check {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fafafa;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .payment-card-box .payment-method .form-check:hover {
+    border-color: #3b82f6;
+    background: #f0f8ff;
+  }
+  
+  .payment-card-box input[type="radio"] {
+    accent-color: #ff7a00;
+  }
+  
+  .payment-card-box img {
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 3px;
+  }

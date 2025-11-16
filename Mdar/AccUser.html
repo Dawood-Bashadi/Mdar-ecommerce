@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="AccUser.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- nav bar -->
+    <header class="topbar ">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between py-2">
+
+
+                <div class="d-flex align-items-center gap-3">
+
+
+                    <div class="logo d-flex align-items-center gap-2">
+                        <img src="imge/product/MR 1.png" alt="logo" class="rounded" style="height:45px;" />
+                    </div>
+
+
+                    <form class="d-none d-md-flex align-items-center">
+                        <div class="input-group search-input">
+                            <select class="form-select" style="max-width: 150px;">
+                                <option selected>All Categories</option>
+                                <option>Shoes</option>
+                                <option>Clothes</option>
+                                <option>Accessories</option>
+                                <option>Perfumes</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Search for products, e.g. sneakers">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1 dropdown-toggle"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-globe"></i>
+                            <span>English</span>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">العربية</a></li>
+                            <li><a class="dropdown-item" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <button onclick="window.location.href='AccUser.html'"
+                            class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1">
+                        <i class="fa fa-user"></i>
+                        <span>Account</span>
+                    </button>
+
+
+
+                    <button id="openWishlist" class="btn btn-link text-decoration-none text-dark d-flex align-items-center gap-1">
+                        <i class="fa fa-bookmark"></i>
+                        <span>Wishlist</span>
+                    </button>
+
+
+                    <button id="openWishlist1" class="btn btn-outline-primary d-flex align-items-center gap-1">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="badge bg-white text-dark ms-1">3</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="btn btn-light px-4 py-2 rounded-pill custom-btn mb-3">⬅ Back</a>
+    </header>
+
+ 
+
+    <div class="photo container">
+        <br />
+        <div class="text-center">
+            <img class="rounded-circle" src="imge/product/e1ab6e2e24c03a7ea0bc9268bf34c65edca05c5e (1).jpg" alt="profile" width="200" height="200">
+            <h3>Dawood Ahmed</h3>
+        </div>
+    </div>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <h3>Profile Picture</h3>
+            <button class="upload-btn">Upload</button>
+            <button class="remove-btn">Remove</button>
+        </div>
+
+        <form>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-envelope icon"></i>EMAIL</label>
+                    <input type="email" class="form-control" value="DawoodAhmed@email.com">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-lock icon"></i>PASSWORD</label>
+                    <input type="password" class="form-control" value="*******************">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-person icon"></i>USERNAME</label>
+                    <input type="text" class="form-control" value="Dawood Ahmed">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-globe icon"></i>COUNTRY</label>
+                    <input type="text" class="form-control" value="Yemen">
+                </div>
+            </div>
+
+            <div class="text-end mt-4">
+                <button type="submit" class="save-btn">Save</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+
+    <footer class="footer_ba ">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="footer-title">MDAR.CO</h5>
+                    <p class="footer-text">
+                        Welcome to Mdar, the premier international marketplace and one-stop web site for finding virtually any product you can imagine. Our platform is designed to connect you directly with a global network of suppliers and manufacturers. For entrepreneurs, we are a leading wholesale.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>HELP</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Delivery Details</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>FAQ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Manage Deliveries</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="payment-icons">
+                <img src="imge\product\Badge.png">
+                <img src="imge\product\Badge (1).png">
+                <img src="imge\product\Badge (4).png">
+                <img src="imge\product\Badge (3).png">
+                <img src="imge\product\Badge (5).png">
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2025 MDAR. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Wishlist Popup -->
+    <div class="wishlist-overlay" id="wishlistOverlay">
+        <div class="wishlist-box">
+
+            <div class="wishlist-header">
+                <span>You have 03 Items in List</span>
+                <h3>Wishlist</h3>
+                <button class="close-btn" id="closeWishlist">✕</button>
+            </div>
+
+            <div class="wishlist-item">
+                <img src="imge/product/ac8c77c543f38368cb9b512e83f5cca9215559eb.jpg" alt="">
+                <div class="item-info">
+                    <h4>Samsung TV 40N5300</h4>
+                    <p>QTY: 1</p>
+                    <p class="price">$730.00</p>
+                </div>
+                <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                <button class="delete-btn"><i class="fa-solid fa-trash fa-xl"></i></button>
+
+            </div>
+
+            <hr>
+
+            <div class="wishlist-item">
+                <img src="imge/product/73176e550390b570e17802a5d36fd419125d39a2.png" alt="">
+                <div class="item-info">
+                    <h4>playstation 4</h4>
+                    <p>QTY: 1</p>
+                    <p class="price">$215.00</p>
+                </div>
+                <button class="btn btn-sm mt-2 custom-btn">Add to cart</button>
+                <button class="delete-btn"><i class="fa-solid fa-trash fa-xl"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <!--Cart popup-->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <span>You have 03 Items in List</span>
+            <h4>Cart List</h4>
+            <button id="closeCart" class="close-btn">&times;</button>
+        </div>
+
+        <div class="cart-body">
+            <div class="cart-item">
+                <img src="imge/product/CUOnJSc6xg_2048x2048 1 (2).png" alt="">
+                <div>
+                    <p>Samsung TV 40N5300</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$730.00</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <hr>
+
+            <div class="cart-item">
+                <img src="imge/product/5e3df45d5360d31b71eeed225d303cba891cfc29.jpg" alt="">
+                <div>
+                    <p>NINIVISION IP Camera</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$38.98</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <hr>
+
+            <div class="cart-item">
+                <img src="imge/product/CUOnJSc6xg_2048x2048 1 (4).png" alt="">
+                <div>
+                    <p>Nintendo Switch Console</p>
+                    <small>QTY: 1</small><br>
+                    <strong>$299.00</strong>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total">
+                <span>Cart Total</span>
+                <strong>$1067.98</strong>
+            </div>
+            <div class="cart-buttons">
+                <button class="btn-go"><a class="text-white" href="Cart.html">Go to Cart </a></button>
+                <button class="btn-checkout">Proceed To Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        (function () {
+            const el = document.getElementById('heroCarousel');
+            if (!el) return;
+            let startX = 0;
+            el.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+            el.addEventListener('touchend', e => {
+                let endX = e.changedTouches[0].clientX;
+                const car = bootstrap.Carousel.getInstance(el);
+                if (!car) return;
+                if (startX - endX > 40) car.next();
+                if (endX - startX > 40) car.prev();
+            });
+        })();
+
+        const openBtn = document.getElementById("openWishlist");
+        const closeBtn = document.getElementById("closeWishlist");
+        const overlay = document.getElementById("wishlistOverlay");
+
+        openBtn.onclick = () => overlay.style.display = "flex";
+        closeBtn.onclick = () => overlay.style.display = "none";
+
+        overlay.onclick = (e) => {
+            if (e.target === overlay) overlay.style.display = "none";
+        };
+
+        document.getElementById("openWishlist1").onclick = () => {
+            document.getElementById("cartSidebar").classList.add("active");
+        };
+        document.getElementById("closeCart").onclick = () => {
+            document.getElementById("cartSidebar").classList.remove("active");
+        };
+
+
+        document.getElementById("openWishlist").onclick = () => {
+            document.getElementById("wishlistOverlay").classList.add("active");
+        };
+
+        document.getElementById("closeWishlist").onclick = () => {
+            document.getElementById("wishlistOverlay").classList.remove("active");
+        };
+
+
+    </script>
+</body>
+</html>
