@@ -119,7 +119,7 @@
             <h5 class="text-center mb-4">Set New Password</h5>
             <div class="form-group">
                 <i class="bi bi-patch-check"></i>
-                <input type="text" class="form-control" id="verificationCode" placeholder="VERIFICATION CODE">
+                <input type="text" class="form-control" id="verificationPassCode" placeholder="VERIFICATION CODE">
             </div>
             <div class="form-group">
                 <i class="bi bi-key"></i>
@@ -131,7 +131,7 @@
             </div>
 
             <p class="text-center mt-3">
-                <a href="#" id="resendCodeLink">Resend Code</a>
+                <a href="#" id="resendCodeLinkReset">Resend Code</a>
             </p>
 
             <button class="login-submit align-items-center" id="resetPasswordBtn">
@@ -244,7 +244,7 @@
 
             resetPasswordBtn.addEventListener('click', function (e) {
                 e.preventDefault();
-                const code = document.getElementById('verificationCode').value;
+                const code = document.getElementById('verificationPassCode').value;
                 const newPass = document.getElementById('newPassword').value;
                 const confirmNewPass = document.getElementById('confirmNewPassword').value;
 
@@ -252,11 +252,11 @@
                     alert('New passwords do not match!');
                     return;
                 }
-                if (!code || !newPass) {
+                if (!code || !newPass || !confirmNewPass) {
                     alert('Please fill in all fields.');
                     return;
                 }
-
+               
                 alert('Password successfully reset! Returning to Login.');
                 showForm('loginForm');
             });
@@ -283,6 +283,22 @@
 
             });
 
+            const resendCodeLink = document.getElementById('resendCodeLink');
+            const resendCodeLinkReset = document.getElementById('resendCodeLinkReset');
+
+            if (resendCodeLink) {
+               resendCodeLink.addEventListener('click', function (e) {
+               e.preventDefault();
+               alert("Verification code has been resent to your email.");
+               });
+            }
+
+            if (resendCodeLinkReset) {
+                resendCodeLinkReset.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert("Verification code has been resent to your email.");
+                });
+            }
 
             if (verifyCodeBtn) {
                 verifyCodeBtn.addEventListener('click', function (e) {
